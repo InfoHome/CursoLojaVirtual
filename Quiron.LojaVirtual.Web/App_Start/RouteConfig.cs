@@ -14,6 +14,12 @@ namespace Quiron.LojaVirtual.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "DefaultProduto",
+                url: "{controller}",
+                defaults: new { controller = "Produto", action = "Index", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
