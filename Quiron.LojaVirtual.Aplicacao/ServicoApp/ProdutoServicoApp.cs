@@ -8,11 +8,10 @@ namespace Quiron.LojaVirtual.Aplicacao.ServicoApp
 {
 
 
-    public class ProdutoServicoApp : ProdutoRepositorio
+    public class ProdutoServicoApp
         
     {
         private readonly ProdutoRepositorio _prodoRepositorio;
-
         public ProdutoServicoApp(ProdutoRepositorio repProduto)
         {
             _prodoRepositorio = repProduto;
