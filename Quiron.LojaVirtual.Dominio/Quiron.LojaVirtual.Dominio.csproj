@@ -79,9 +79,25 @@
   <ItemGroup>
     <Compile Include="Contexto\EFDBContext.cs" />
     <Compile Include="Entidade\Produto.cs" />
+    <Compile Include="Migrations\201605260112572_Migração_Inicial.cs" />
+    <Compile Include="Migrations\201605260112572_Migração_Inicial.Designer.cs">
+      <DependentUpon>201605260112572_Migração_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605260146200_Alteração_bdo.Produto_para_dbo.Produtos.cs" />
+    <Compile Include="Migrations\201605260146200_Alteração_bdo.Produto_para_dbo.Produtos.Designer.cs">
+      <DependentUpon>201605260146200_Alteração_bdo.Produto_para_dbo.Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605260112572_Migração_Inicial.resx">
+      <DependentUpon>201605260112572_Migração_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605260146200_Alteração_bdo.Produto_para_dbo.Produtos.resx">
+      <DependentUpon>201605260146200_Alteração_bdo.Produto_para_dbo.Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

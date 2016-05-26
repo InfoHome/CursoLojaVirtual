@@ -21,8 +21,8 @@ namespace Quiron.LojaVirtual.Dominio.Contexto
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-            
 
+            modelBuilder.Entity<Produto>().ToTable("Produtos");
         }
     }
 }
