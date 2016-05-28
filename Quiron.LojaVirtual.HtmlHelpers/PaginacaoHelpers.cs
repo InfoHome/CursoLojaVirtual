@@ -11,20 +11,19 @@ namespace Quiron.LojaVirtual.HtmlHelpers
         {
             StringBuilder lpResult = new StringBuilder();
             
-            for (int i = 0; i < paginacao.TotalDePagina; i++)
+            for (int i = 1; i <= paginacao.TotalDePagina; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.MergeAttribute("href", paginaUrl(i));
                 tag.InnerHtml = i.ToString();
-                tag.AddCssClass("btn btn-default");
 
                 if(i== paginacao.PaginaAtual)
                 {
                     tag.AddCssClass("selected");
-                    tag.AddCssClass("btn btn - primary");
+                    tag.AddCssClass("btn-primary");
 
                 }
-
+                tag.AddCssClass("btn btn-default");
                 lpResult.Append(tag);
             }
 

@@ -33,7 +33,7 @@ namespace Quiron.LojaVirtual.UnitTest
             CollectionAssert.AreEqual(teste, lista.ToArray());
         }
         [TestMethod]
-        public void CT_PaginacaoHelpers_LinksDaPagina()
+        public void CT_PaginacaoHelpers_LinksDaPagina_GeraPaginacaoComSelectedNaSegundaPagina()
         {
             //Arrange
             HtmlHelper html = null;
@@ -50,10 +50,12 @@ namespace Quiron.LojaVirtual.UnitTest
 
             //Acessert
 
-            Assert.AreEqual(ctResult.ToString(),
+            Assert.AreEqual(
                   @"<a class=""btn btn-default"" href=""Pagina1"">1</a>"
                 + @"<a class=""btn btn-default btn-primary selected"" href=""Pagina2"">2</a>"
-                + @"<a class=""btn btn-default"" href=""Pagina3"">3</a>");
+                + @"<a class=""btn btn-default"" href=""Pagina3"">3</a>", 
+                  ctResult.ToString()
+                  );
 
            
         }
