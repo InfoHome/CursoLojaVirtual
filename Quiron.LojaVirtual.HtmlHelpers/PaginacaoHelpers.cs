@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Quiron.LojaVirtual.Web.ViewModels;
+using System.Web.Mvc;
+using System;
 
 namespace Quiron.LojaVirtual.HtmlHelpers
 {
-    public class PaginacaoHelpers
+    public static class PaginacaoHelpers
     {
-        public class MvcHtmlString LinksDaPagina()
+        public static MvcHtmlString LinksDaPagina(this HtmlHelper html, Paginacao paginacao, Func<int,string> paginaUrl )
         {
-
+            return""
         }
     }
 }
