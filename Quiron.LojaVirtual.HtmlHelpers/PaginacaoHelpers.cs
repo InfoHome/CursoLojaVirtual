@@ -8,5 +8,9 @@ namespace Quiron.LojaVirtual.HtmlHelpers
 {
     public class PaginacaoHelpers
     {
+        public class MvcHtmlString LinksDaPagina()
+        {
+
+        }
     }
 }
