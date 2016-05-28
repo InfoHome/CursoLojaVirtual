@@ -17,9 +17,9 @@ namespace Quiron.LojaVirtual.Aplicacao.ServicoApp
             _prodoRepositorio = repProduto;
         }
 
-        public IEnumerable<Produto> ListarProdutdos(int quant)
+        public IEnumerable<Produto> ListarProdutdos()
         {
-           return _prodoRepositorio.Produtos.Take(quant);
+            return _prodoRepositorio.Produtos;
         }
 
     }

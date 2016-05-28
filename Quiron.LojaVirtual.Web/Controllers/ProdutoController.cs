@@ -16,7 +16,8 @@ namespace Quiron.LojaVirtual.Web.Controllers
         public ActionResult Index()
         {
         
-                 return View(_srvProduto.ListarProdutdos(3));
+            var lstProduto = _srvProduto.ListarProdutdos();
+            return View(lstProduto);
         }
     }
 }

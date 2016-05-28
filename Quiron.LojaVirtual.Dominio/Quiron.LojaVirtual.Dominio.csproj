@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Contexto\EFDBContext.cs" />
     <Compile Include="Entidade\Produto.cs" />
+    <Compile Include="EntityConfig\ProdutoConfig.cs" />
     <Compile Include="Migrations\201605260112572_Migração_Inicial.cs" />
     <Compile Include="Migrations\201605260112572_Migração_Inicial.Designer.cs">
       <DependentUpon>201605260112572_Migração_Inicial.cs</DependentUpon>
