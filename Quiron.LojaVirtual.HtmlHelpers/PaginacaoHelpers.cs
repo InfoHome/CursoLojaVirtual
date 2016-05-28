@@ -14,7 +14,7 @@ namespace Quiron.LojaVirtual.HtmlHelpers
             for (int i = 0; i < paginacao.TotalDePagina; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
-                tag.MergeAttribute("href",paginaUrl(i));
+                tag.MergeAttribute("href", paginaUrl(i));
                 tag.InnerHtml = i.ToString();
                 tag.AddCssClass("btn btn-default");
 

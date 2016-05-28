@@ -48,6 +48,10 @@
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Mvc.Extensions, Version=1.0.9.0, Culture=neutral, PublicKeyToken=17e35335fc9f8fc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Mvc.Extensions.Mvc.4.1.0.9\lib\net40\System.Web.Mvc.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
@@ -86,12 +90,17 @@
       <Project>{8ed94ef6-461f-47ed-ae32-cab67f568cb3}</Project>
       <Name>Quiron.LojaVirtual.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Quiron.LojaVirtual.HtmlHelpers\Quiron.LojaVirtual.HtmlHelpers.csproj">
+      <Project>{a4233109-7154-4013-9cb0-0d57b39664bf}</Project>
+      <Name>Quiron.LojaVirtual.HtmlHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Quiron.LojaVirtual.Web\Quiron.LojaVirtual.Web.csproj">
       <Project>{22f746b6-7a57-448f-9b74-6443b54cf44f}</Project>
       <Name>Quiron.LojaVirtual.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
