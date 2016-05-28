@@ -13,10 +13,11 @@ namespace Quiron.LojaVirtual.Web.Controllers
             _srvProduto = ProdutoServicoConstrutor.ProdutoRepositorio();
         }
 
+        public int ProdutoPorPagina = 5;
+
         public ActionResult Index()
-        {
-        
-            var lstProduto = _srvProduto.ListarProdutdos();
+        {        
+            var lstProduto = _srvProduto.ListarTopProdutdos(ProdutoPorPagina);
             return View(lstProduto);
         }
     }

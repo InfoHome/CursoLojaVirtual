@@ -12,20 +12,20 @@ namespace Quiron.LojaVirtual.Web.Controllers
     public class VitrineController : Controller
     {
         private readonly ProdutoServicoApp _srvProduto;
-        public int ProdutosPorPagina = 3;
+        public int ProdutosPorPagina = 10;
 
         public VitrineController()
         {
             _srvProduto = ProdutoServicoConstrutor.ProdutoRepositorio();
         }
 
-        public ActionResult Listaprodutos(int pagina = 1)
+        public ActionResult VitrineListaDeProdutos(int pagina = 1)
         {
 
             var lstProduto = _srvProduto.ListarProdutdos()
                 .OrderBy(p => p.Descricao)
                 .Skip((pagina - 1) * ProdutosPorPagina)
-                .Take(ProdutosPorPagina);
+                .Take(ProdutosPorPagina).OrderBy(p => p.ProdutoId);
             
             return View(lstProduto);
         }
