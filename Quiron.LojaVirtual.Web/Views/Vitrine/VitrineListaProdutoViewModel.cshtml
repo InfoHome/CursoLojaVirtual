@@ -7,9 +7,11 @@
 
 @foreach (var p in Model.Produtos)
 {
-    <h2>@p.Nome</h2>
-    <p>@p.Descricao</p> 
-    <h4>@p.Preco.ToString("c")</h4>
+    <div class="well">
+        @p.Nome
+        @p.Descricao
+        @p.Preco.ToString("c")
+    </div>
 }
 
 @Html.LinksDaPagina(Model.Paginacao, x => Url.Action("VitrineListaProdutoViewModel", new { pagina = x }))

@@ -9,7 +9,12 @@ namespace Quiron.LojaVirtual.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            
+            routes.MapRoute(
+                name:null,
+                url:"Vitrini{pagina}",
+                defaults: new { Controller="Vitrine", action = "VitrineListaProdutoViewModel" }
+                );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

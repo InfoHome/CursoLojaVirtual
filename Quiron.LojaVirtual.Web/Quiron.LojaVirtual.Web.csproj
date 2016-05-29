@@ -167,6 +167,7 @@
     <Content Include="Views\Produto\Index.cshtml" />
     <Content Include="Views\Vitrine\VitrineListaDeProdutos.cshtml" />
     <Content Include="Views\Vitrine\VitrineListaProdutoViewModel.cshtml" />
+    <Content Include="Views\Shared\_Layout_Quiron.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
