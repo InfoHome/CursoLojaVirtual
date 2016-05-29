@@ -8,10 +8,25 @@
 @foreach (var p in Model.Produtos)
 {
     <div class="well">
-        @p.Nome
-        @p.Descricao
-        @p.Preco.ToString("c")
+        <h3>
+            <strong>@p.Nome</strong>
+        </h3>
+        <h3>
+            <span class="pull-right label label-primary">
+                @p.Preco.ToString("c")
+            </span>
+        </h3>
+        <h3>
+            <span class="lead">
+                @p.Descricao  "asdfasdfasd asdfalsdflajskdf asdfjasdjfkjalsdf asdflkaslçdkfçasd 
+                fasdfasdfa sdf asdfasdfa sdf asdfas dfasdasdf asdfasdfasd fasdflansdlkfas
+                dfasdfasdfas
+                dfasdfasdfasdfasdf asd fas dfasdfasdfasd fasdfa sdfasdfasd fasdfasdfasdf"
+            </span>
+        </h3>
+        
     </div>
 }
-
-@Html.LinksDaPagina(Model.Paginacao, x => Url.Action("VitrineListaProdutoViewModel", new { pagina = x }))
+<div class="btn-group pull-right">
+    @Html.LinksDaPagina(Model.Paginacao, x => Url.Action("VitrineListaProdutoViewModel", new { pagina = x }))
+</div>
