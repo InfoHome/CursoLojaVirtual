@@ -1,7 +1,7 @@
-﻿using Quiron.LojaVirtual.Web.ViewModels;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System;
 using System.Text;
+using Quiron.LojaVirtual.HtmlHelpers.Model;
 
 namespace Quiron.LojaVirtual.HtmlHelpers
 {

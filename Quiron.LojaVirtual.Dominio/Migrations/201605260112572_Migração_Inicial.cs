@@ -1,8 +1,7 @@
 namespace Quiron.LojaVirtual.Dominio.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class Migração_Inicial : DbMigration
     {
         public override void Up()

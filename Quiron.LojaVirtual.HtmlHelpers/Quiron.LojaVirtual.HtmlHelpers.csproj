@@ -73,14 +73,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Paginacao.cs" />
     <Compile Include="PaginacaoHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Quiron.LojaVirtual.Web\Quiron.LojaVirtual.Web.csproj">
-      <Project>{22f746b6-7a57-448f-9b74-6443b54cf44f}</Project>
-      <Name>Quiron.LojaVirtual.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

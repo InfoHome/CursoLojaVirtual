@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using Quiron.LojaVirtual.Web.ViewModels;
 using System.Web.Mvc;
 using System;
 using Quiron.LojaVirtual.HtmlHelpers;
+using Quiron.LojaVirtual.HtmlHelpers.Model;
 
 namespace Quiron.LojaVirtual.UnitTest
 {

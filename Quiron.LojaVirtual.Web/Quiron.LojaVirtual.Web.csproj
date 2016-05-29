@@ -149,7 +149,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\Paginacao.cs" />
+    <Compile Include="ViewModels\VitrineViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -166,6 +166,7 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Produto\Index.cshtml" />
     <Content Include="Views\Vitrine\VitrineListaDeProdutos.cshtml" />
+    <Content Include="Views\Vitrine\VitrineListaProdutoViewModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -184,6 +185,10 @@
     <ProjectReference Include="..\Quiron.LojaVirtual.Dominio\Quiron.LojaVirtual.Dominio.csproj">
       <Project>{8ED94EF6-461F-47ED-AE32-CAB67F568CB3}</Project>
       <Name>Quiron.LojaVirtual.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quiron.LojaVirtual.HtmlHelpers\Quiron.LojaVirtual.HtmlHelpers.csproj">
+      <Project>{a4233109-7154-4013-9cb0-0d57b39664bf}</Project>
+      <Name>Quiron.LojaVirtual.HtmlHelpers</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,15 @@
+﻿@using Quiron.LojaVirtual.
+@model Quiron.LojaVirtual.Web.ViewModels.VitrineViewModel
+
+@{
+    ViewBag.Title = "VitrineListaProdutoViewModel";
+}
+
+@foreach (var p in Model.Produtos)
+{
+    <h2>@p.Nome</h2>
+    <p>@p.Descricao</p>
+    <h4>@p.Preco.ToString("c")</h4>
+}
+
+@Html.LinksDaPagina
