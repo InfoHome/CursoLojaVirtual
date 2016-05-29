@@ -11,7 +11,14 @@ namespace Quiron.LojaVirtual.HtmlHelpers.Model
         {
             get
             {
-                return (int)Math.Ceiling((decimal)ItensTotal / ItensPorPagina);
+                var qtds = (int)Math.Ceiling((decimal)(ItensTotal / ItensPorPagina));
+
+                if ((ItensTotal % ItensPorPagina) > 0)
+                {
+                    ++qtds;
+                }
+
+                return qtds;
             }
         }
     }
