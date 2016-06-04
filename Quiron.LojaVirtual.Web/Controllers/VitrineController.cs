@@ -12,18 +12,17 @@ namespace Quiron.LojaVirtual.Web.Controllers
     {
         private readonly ProdutoServicoApp _srvProduto;
         
-        public int ProdutosPorPagina = 10;
+        public int ProdutosPorPagina = 50;
 
         public VitrineController()
         {
             _srvProduto = ProdutoServicoConstrutor.ProdutoRepositorio();
         }
 
-        public ActionResult VitrineListaDeProdutos(string categoria , int pagina = 1)
+        public ActionResult VitrineListaDeProdutos(int pagina = 1)
         {
 
             var lstProduto = _srvProduto.ListarProdutdos()
-                .Where(p => p.Categoria == null || p.Categoria ==categoria)
                 .OrderBy(p => p.Descricao)
                 .Skip((pagina - 1) * ProdutosPorPagina)
                 .Take(ProdutosPorPagina).OrderBy(p => p.ProdutoId);
@@ -31,23 +30,25 @@ namespace Quiron.LojaVirtual.Web.Controllers
             return View(lstProduto);
         }
 
-        public ViewResult VitrineListaProdutoViewModel(int pagina = 1)
-        {
+        public ViewResult VitrineListaProdutoViewModel(string categoria, int pagina = 1)
 
+       {
             VitrineViewModel model = new VitrineViewModel()
             {
-
                 Produtos = _srvProduto.ListarProdutdos()
-              .OrderBy(p => p.Descricao)
-              .Skip((pagina - 1) * ProdutosPorPagina)
-              .Take(ProdutosPorPagina).OrderBy(p => p.ProdutoId),
+                 .Where(p => p.Categoria == null || p.Categoria == categoria)
+                 .OrderBy(p => p.Descricao)
+                 .Skip((pagina - 1) * ProdutosPorPagina)
+                 .Take(ProdutosPorPagina).OrderBy(p => p.ProdutoId),
 
                 Paginacao = new Paginacao()
                 {
                     PaginaAtual = pagina,
                     ItensPorPagina = ProdutosPorPagina,
                     ItensTotal = _srvProduto.ListarProdutdos().Count()
-                }
+                },
+
+                CategoriaAtual = categoria
             };
             return View(model);
 

@@ -5,6 +5,7 @@
     ViewBag.Title = "VitrineListaProdutoViewModel";
 }
 
+
 @foreach (var p in Model.Produtos)
 {
     <div class="well">
@@ -18,10 +19,7 @@
         </h3>
         <h3>
             <span class="lead">
-                @p.Descricao  "asdfasdfasd asdfalsdflajskdf asdfjasdjfkjalsdf asdflkaslçdkfçasd 
-                fasdfasdfa sdf asdfasdfa sdf asdfas dfasdasdf asdfasdfasd fasdflansdlkfas
-                dfasdfasdfas
-                dfasdfasdfasdfasdf asd fas dfasdfasdfasd fasdfa sdfasdfasd fasdfasdfasdf"
+                @p.Descricao 
             </span>
         </h3>
         
@@ -30,3 +28,4 @@
 <div class="btn-group pull-right">
     @Html.LinksDaPagina(Model.Paginacao, x => Url.Action("VitrineListaProdutoViewModel", new { pagina = x }))
 </div>
+

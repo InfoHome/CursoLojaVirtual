@@ -9,11 +9,50 @@ namespace Quiron.LojaVirtual.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // 1 - /
+            routes.MapRoute(null,
+                "",
+                new
+                {
+                    controller = "Vitrine",
+                    action = "VitrineListaProdutoViewModel",
+                    categoria = (string)null,
+                    pagina = 1
+                });
+
+            // 2 - Pagina/1
+            routes.MapRoute(null,
+               "Vitrine{pagina}",
+            new
+            {
+                controller = "Vitrine",
+                action = "VitrineListaProdutoViewModel",
+                categoria = (string)null
+            },
+            new { pagina = @"\d+" });
+
+            // 3 Categoria
+            routes.MapRoute(null,
+                "{categoria}",
+                new { Controller = "Vitrine", action = "VitrineListaProdutoViewModel", pagina = 1 });
+
+            // 4 Categoria/Pagina1
+            routes.MapRoute(null,
+                "{categoria}Vitrine{pagina}",
+            new { controller = "Vitrine", action = "VitrineListaProdutoViewModel" },
+            new { pagina = @"\d+" });
+
+
             routes.MapRoute(
-                name:null,
-                url:"Vitrini{pagina}",
-                defaults: new { Controller="Vitrine", action = "VitrineListaProdutoViewModel" }
+                name: null,
+                url: "Vitrine{pagina}",
+                defaults: new { Controller = "Vitrine", action = "VitrineListaProdutoViewModel" }
                 );
+            //routes.MapRoute(
+            //    name: null,
+            //    url: "Vitrine{pagina}",
+            //    defaults: new { Controller = "Vitrine", action = "VitrineListaProdutoViewModel" }
+            //    );
 
             routes.MapRoute(
                 name: "Default",
