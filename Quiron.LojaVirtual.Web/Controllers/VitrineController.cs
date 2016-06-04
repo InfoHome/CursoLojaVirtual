@@ -19,10 +19,11 @@ namespace Quiron.LojaVirtual.Web.Controllers
             _srvProduto = ProdutoServicoConstrutor.ProdutoRepositorio();
         }
 
-        public ActionResult VitrineListaDeProdutos(int pagina = 1)
+        public ActionResult VitrineListaDeProdutos(string categoria , int pagina = 1)
         {
 
             var lstProduto = _srvProduto.ListarProdutdos()
+                .Where(p => p.Categoria == null || p.Categoria ==categoria)
                 .OrderBy(p => p.Descricao)
                 .Skip((pagina - 1) * ProdutosPorPagina)
                 .Take(ProdutosPorPagina).OrderBy(p => p.ProdutoId);
