@@ -26,6 +26,6 @@
     </div>
 }
 <div class="btn-group pull-right">
-    @Html.LinksDaPagina(Model.Paginacao, x => Url.Action("VitrineListaProdutoViewModel", new { pagina = x }))
+    @Html.LinksDaPagina(Model.Paginacao, x => Url.Action("VitrineListaProdutoViewModel", new { pagina = x, categoria= Model.CategoriaAtual }))
 </div>
 

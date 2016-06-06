@@ -10,8 +10,7 @@ namespace Quiron.LojaVirtual.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             // 1 - /
-            routes.MapRoute(null,
-                "",
+            routes.MapRoute(null, "",
                 new
                 {
                     controller = "Vitrine",
@@ -21,8 +20,7 @@ namespace Quiron.LojaVirtual.Web
                 });
 
             // 2 - Pagina/1
-            routes.MapRoute(null,
-               "Vitrine{pagina}",
+            routes.MapRoute(null, "Vitrine{pagina}",
             new
             {
                 controller = "Vitrine",
@@ -32,27 +30,24 @@ namespace Quiron.LojaVirtual.Web
             new { pagina = @"\d+" });
 
             // 3 Categoria
-            routes.MapRoute(null,
-                "{categoria}",
-                new { Controller = "Vitrine", action = "VitrineListaProdutoViewModel", pagina = 1 });
+            routes.MapRoute(null, "{categoria}",
+                new
+                {
+                    Controller = "Vitrine",
+                    action = "VitrineListaProdutoViewModel",
+                    pagina = 1
+                });
 
             // 4 Categoria/Pagina1
-            routes.MapRoute(null,
-                "{categoria}Vitrine{pagina}",
-            new { controller = "Vitrine", action = "VitrineListaProdutoViewModel" },
+            routes.MapRoute(null, "{categoria}/Vitrine{pagina}",
+            new
+            {
+                controller = "Vitrine",
+                action = "VitrineListaProdutoViewModel"
+            },
             new { pagina = @"\d+" });
 
-
-            routes.MapRoute(
-                name: null,
-                url: "Vitrine{pagina}",
-                defaults: new { Controller = "Vitrine", action = "VitrineListaProdutoViewModel" }
-                );
-            //routes.MapRoute(
-            //    name: null,
-            //    url: "Vitrine{pagina}",
-            //    defaults: new { Controller = "Vitrine", action = "VitrineListaProdutoViewModel" }
-            //    );
+           // routes.MapRoute(null, "{controller}/{action}");
 
             routes.MapRoute(
                 name: "Default",
